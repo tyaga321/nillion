@@ -49,7 +49,7 @@ SECRET_FILE=~/nillion/accuser/credentials.json
 if [ -f "$SECRET_FILE" ]; then
     ADDRESS=$(jq -r '.address' "$SECRET_FILE")
     echo ""
-    echo "Send nillion faucet to your accuser wallet address: $ADDRESS"
+    echo "Request nillion faucet (https://faucet.testnet.nillion.com) to your accuser wallet address: $ADDRESS"
     echo ""
 
     read -p "Have you requested the faucet to the accuser wallet? (y/Y to proceed): " FAUCET_REQUESTED1
