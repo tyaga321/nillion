@@ -57,7 +57,7 @@ if [ -f "$SECRET_FILE" ]; then
         echo ""
         echo "Now visit: https://verifier.nillion.com/verifier"
         echo "Connect a new Keplr wallet."
-        echo "Request some faucet to the nillion address of that Keplr wallet."
+        echo "Request faucet to the nillion address : https://faucet.testnet.nillion.com"
         echo ""
 
         read -p "Have you requested faucet to your Keplr wallet? (Y/y to proceed): " FAUCET_REQUESTED2
