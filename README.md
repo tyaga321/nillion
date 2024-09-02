@@ -9,3 +9,5 @@ wget -q https://raw.githubusercontent.com/dxzenith/nillion/main/nillion.sh && ch
 ```
 - You will see `Registered : true` after 20 mins
 - And your node will start sending secret to Nillion after 50 mins
+
+## Join my TG for solving node related issues : [@ZunXBT](https://t.me/ZunXBT)
