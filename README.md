@@ -23,7 +23,7 @@ docker ps
 Copy the `CONTAINER_ID` of nillion docker container
 Now replace the `CONTAINER_ID` in the below command and then execute the below command
 ```bash
-docker logs CONTAINER_ID -n 500 | grep "Registered"
+docker logs CONTAINER_ID | grep "Registered"
 ```
 
 - **How to check : how many secrets has been sent to nillion?**
@@ -37,7 +37,7 @@ Copy the `CONTAINER_ID` of nillion docker container
 Now replace the `CONTAINER_ID` in the below command and then execute the below command
 
 ```bash
-docker logs CONTAINER_ID -n 500 | grep "Secret stores Found"
+docker logs CONTAINER_ID | grep "Secret stores Found"
 ```
 
 - **Issue : Secret found 0 but registered True**
