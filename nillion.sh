@@ -43,7 +43,7 @@ docker pull nillion/retailtoken-accuser:latest
 echo ""
 echo "Creating directory and running Docker container to initialize..."
 mkdir -p nillion/accuser && \
-docker run -v "$(pwd)/nillion/accuser:/var/tmp" nillion/retailtoken-accuser:latest initialise
+sudo docker run -v "$(pwd)/nillion/accuser:/var/tmp" nillion/retailtoken-accuser:latest initialise
 
 SECRET_FILE=~/nillion/accuser/credentials.json
 if [ -f "$SECRET_FILE" ]; then
