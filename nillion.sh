@@ -33,12 +33,12 @@ fi
 sudo apt update && sudo apt install -y jq bc
 echo ""
 echo "Stopping and removing any running containers with the name 'nillion'..."
-docker ps | grep nillion | awk '{print $1}' | xargs -r docker stop
-docker ps -a | grep nillion | awk '{print $1}' | xargs -r docker rm
+sudo docker ps | grep nillion | awk '{print $1}' | xargs -r docker stop
+sudo docker ps -a | grep nillion | awk '{print $1}' | xargs -r docker rm
 
 echo ""
 echo "Pulling NILLION docker image..."
-docker pull nillion/retailtoken-accuser:latest
+sudo docker pull nillion/retailtoken-accuser:latest
 
 echo ""
 echo "Creating directory and running Docker container to initialize..."
