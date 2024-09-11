@@ -1,12 +1,12 @@
 #!/bin/bash
 
 echo ""
-echo "Follow: https://x.com/ZunXBT"
-read -p "Have you followed @ZunXBT on X? (y/Y to proceed): " FOLLOWED
+echo "Follow: https://x.com/BalinJeksar"
+read -p "Have you followed @SuhuAle on X? (y/Y to proceed): " FOLLOWED
 
 if [[ ! "$FOLLOWED" =~ ^[yY]$ ]]; then
     echo ""
-    echo "Please follow @ZunXBT on X before proceeding."
+    echo "Please follow @SuhuAle NGASEK ONLINE on X before proceeding."
     exit 1
 fi
 
@@ -38,7 +38,7 @@ sudo docker ps -a | grep nillion | awk '{print $1}' | xargs -r docker rm
 
 echo ""
 echo "Pulling NILLION docker image..."
-sudo docker pull nillion/retailtoken-accuser:latest
+sudo docker pull nillion/retailtoken-accuser:v1.0.1
 
 echo ""
 echo "Creating directory and running Docker container to initialize..."
@@ -78,7 +78,7 @@ if [ -f "$SECRET_FILE" ]; then
                 if [[ "$private_key_saved" =~ ^[yY]$ ]]; then
                     echo ""
                     echo "Running Docker container with accuse command..."
-                    sudo docker run -v "$(pwd)/nillion/accuser:/var/tmp" nillion/retailtoken-accuser:v1.0.1 accuse --rpc-endpoint "https://nillion-testnet.rpc.kjnodes.com" --block-start 5753385
+                    sudo docker run -v "$(pwd)/nillion/accuser:/var/tmp" nillion/retailtoken-accuser:v1.0.1 accuse --rpc-endpoint "https://nillion-testnet.rpc.kjnodes.com" --block-start 5215024
                 else
                     echo ""
                     echo "Please save the private key and try again."
